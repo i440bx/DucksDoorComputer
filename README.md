@@ -31,3 +31,9 @@ Transfer the times to the spreadsheet and add an offset for dusk. For our ducks,
 +1.3" OLED (https://www.az-delivery.de/products/1-3zoll-i2c-oled-display)
 
 +Arduino Nano (https://www.az-delivery.de/products/nano-v3-0-pro?variant=39457767915616)
+
++4 Screws M2.5x20 and 4 Nuts M2.5
+
++4 Standoff's M2x10 and 8 Screws M2x6
+
++Some Jumperheaders and Sockets
