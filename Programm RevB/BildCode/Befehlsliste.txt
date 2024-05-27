@@ -1,0 +1,70 @@
+ display.drawPixel(48, 0, WHITE); display.drawPixel(49, 0, WHITE); display.drawPixel(50, 0, WHITE); display.drawPixel(51, 0, WHITE); display.drawPixel(52, 0, WHITE); display.drawPixel(53, 0, WHITE); 
+ display.drawPixel(47, 1, WHITE); display.drawPixel(53, 1, WHITE); display.drawPixel(54, 1, WHITE); 
+ display.drawPixel(45, 2, WHITE); display.drawPixel(46, 2, WHITE); display.drawPixel(47, 2, WHITE); display.drawPixel(49, 2, WHITE); display.drawPixel(54, 2, WHITE); display.drawPixel(55, 2, WHITE); 
+ display.drawPixel(44, 3, WHITE); display.drawPixel(45, 3, WHITE); display.drawPixel(47, 3, WHITE); display.drawPixel(55, 3, WHITE); display.drawPixel(56, 3, WHITE); 
+ display.drawPixel(43, 4, WHITE); display.drawPixel(48, 4, WHITE); display.drawPixel(56, 4, WHITE); 
+ display.drawPixel(42, 5, WHITE); display.drawPixel(45, 5, WHITE); display.drawPixel(46, 5, WHITE); display.drawPixel(47, 5, WHITE); display.drawPixel(48, 5, WHITE); display.drawPixel(49, 5, WHITE); display.drawPixel(50, 5, WHITE); display.drawPixel(51, 5, WHITE); display.drawPixel(52, 5, WHITE); display.drawPixel(53, 5, WHITE); display.drawPixel(57, 5, WHITE); 
+ display.drawPixel(42, 6, WHITE); display.drawPixel(43, 6, WHITE); display.drawPixel(44, 6, WHITE); display.drawPixel(45, 6, WHITE); display.drawPixel(53, 6, WHITE); display.drawPixel(54, 6, WHITE); display.drawPixel(57, 6, WHITE); 
+ display.drawPixel(54, 7, WHITE); display.drawPixel(55, 7, WHITE); display.drawPixel(58, 7, WHITE); 
+ display.drawPixel(55, 8, WHITE); display.drawPixel(58, 8, WHITE); 
+ display.drawPixel(55, 9, WHITE); display.drawPixel(56, 9, WHITE); display.drawPixel(59, 9, WHITE); 
+ display.drawPixel(56, 10, WHITE); display.drawPixel(59, 10, WHITE); 
+ display.drawPixel(56, 11, WHITE); display.drawPixel(57, 11, WHITE); display.drawPixel(60, 11, WHITE); 
+ display.drawPixel(57, 12, WHITE); display.drawPixel(60, 12, WHITE); 
+ display.drawPixel(57, 13, WHITE); display.drawPixel(61, 13, WHITE); 
+ display.drawPixel(58, 14, WHITE); display.drawPixel(61, 14, WHITE); 
+ display.drawPixel(58, 15, WHITE); display.drawPixel(62, 15, WHITE); 
+ display.drawPixel(59, 16, WHITE); display.drawPixel(62, 16, WHITE); 
+ display.drawPixel(59, 17, WHITE); display.drawPixel(63, 17, WHITE); 
+ display.drawPixel(59, 18, WHITE); display.drawPixel(64, 18, WHITE); 
+ display.drawPixel(60, 19, WHITE); display.drawPixel(64, 19, WHITE); 
+ display.drawPixel(60, 20, WHITE); display.drawPixel(65, 20, WHITE); 
+ display.drawPixel(60, 21, WHITE); display.drawPixel(66, 21, WHITE); 
+ display.drawPixel(60, 22, WHITE); display.drawPixel(66, 22, WHITE); 
+ display.drawPixel(60, 23, WHITE); display.drawPixel(67, 23, WHITE); 
+ display.drawPixel(60, 24, WHITE); display.drawPixel(68, 24, WHITE); 
+ display.drawPixel(60, 25, WHITE); display.drawPixel(68, 25, WHITE); 
+ display.drawPixel(60, 26, WHITE); display.drawPixel(69, 26, WHITE); 
+ display.drawPixel(60, 27, WHITE); display.drawPixel(70, 27, WHITE); 
+ display.drawPixel(60, 28, WHITE); display.drawPixel(70, 28, WHITE); 
+ display.drawPixel(60, 29, WHITE); display.drawPixel(71, 29, WHITE); 
+ display.drawPixel(60, 30, WHITE); display.drawPixel(72, 30, WHITE); 
+ display.drawPixel(60, 31, WHITE); display.drawPixel(72, 31, WHITE); 
+ display.drawPixel(60, 32, WHITE); display.drawPixel(73, 32, WHITE); 
+ display.drawPixel(61, 33, WHITE); display.drawPixel(73, 33, WHITE); 
+ display.drawPixel(61, 34, WHITE); display.drawPixel(73, 34, WHITE); 
+ display.drawPixel(61, 35, WHITE); display.drawPixel(74, 35, WHITE); 
+ display.drawPixel(61, 36, WHITE); display.drawPixel(74, 36, WHITE); 
+ display.drawPixel(61, 37, WHITE); display.drawPixel(74, 37, WHITE); 
+ display.drawPixel(62, 38, WHITE); display.drawPixel(75, 38, WHITE); 
+ display.drawPixel(62, 39, WHITE); display.drawPixel(70, 39, WHITE); display.drawPixel(75, 39, WHITE); 
+ display.drawPixel(62, 40, WHITE); display.drawPixel(71, 40, WHITE); display.drawPixel(76, 40, WHITE); 
+ display.drawPixel(63, 41, WHITE); display.drawPixel(72, 41, WHITE); display.drawPixel(76, 41, WHITE); 
+ display.drawPixel(63, 42, WHITE); display.drawPixel(72, 42, WHITE); display.drawPixel(77, 42, WHITE); 
+ display.drawPixel(64, 43, WHITE); display.drawPixel(73, 43, WHITE); display.drawPixel(77, 43, WHITE); display.drawPixel(78, 43, WHITE); 
+ display.drawPixel(64, 44, WHITE); display.drawPixel(74, 44, WHITE); display.drawPixel(78, 44, WHITE); display.drawPixel(79, 44, WHITE); 
+ display.drawPixel(64, 45, WHITE); display.drawPixel(74, 45, WHITE); display.drawPixel(75, 45, WHITE); display.drawPixel(80, 45, WHITE); display.drawPixel(81, 45, WHITE); 
+ display.drawPixel(65, 46, WHITE); display.drawPixel(74, 46, WHITE); display.drawPixel(76, 46, WHITE); display.drawPixel(77, 46, WHITE); display.drawPixel(78, 46, WHITE); display.drawPixel(80, 46, WHITE); 
+ display.drawPixel(65, 47, WHITE); display.drawPixel(73, 47, WHITE); display.drawPixel(80, 47, WHITE); display.drawPixel(81, 47, WHITE); display.drawPixel(82, 47, WHITE); display.drawPixel(83, 47, WHITE); 
+ display.drawPixel(65, 48, WHITE); display.drawPixel(73, 48, WHITE); display.drawPixel(83, 48, WHITE); display.drawPixel(84, 48, WHITE); 
+ display.drawPixel(65, 49, WHITE); display.drawPixel(72, 49, WHITE); display.drawPixel(84, 49, WHITE); 
+ display.drawPixel(65, 50, WHITE); display.drawPixel(83, 50, WHITE); display.drawPixel(84, 50, WHITE); 
+ display.drawPixel(66, 51, WHITE); display.drawPixel(71, 51, WHITE); display.drawPixel(81, 51, WHITE); display.drawPixel(82, 51, WHITE); display.drawPixel(83, 51, WHITE); 
+ display.drawPixel(66, 52, WHITE); display.drawPixel(70, 52, WHITE); display.drawPixel(71, 52, WHITE); display.drawPixel(80, 52, WHITE); display.drawPixel(81, 52, WHITE); 
+ display.drawPixel(66, 53, WHITE); display.drawPixel(69, 53, WHITE); display.drawPixel(70, 53, WHITE); display.drawPixel(79, 53, WHITE); display.drawPixel(80, 53, WHITE); 
+ display.drawPixel(65, 54, WHITE); display.drawPixel(66, 54, WHITE); display.drawPixel(68, 54, WHITE); display.drawPixel(71, 54, WHITE); display.drawPixel(72, 54, WHITE); display.drawPixel(73, 54, WHITE); display.drawPixel(78, 54, WHITE); display.drawPixel(79, 54, WHITE); 
+ display.drawPixel(65, 55, WHITE); display.drawPixel(67, 55, WHITE); display.drawPixel(72, 55, WHITE); display.drawPixel(73, 55, WHITE); display.drawPixel(74, 55, WHITE); display.drawPixel(75, 55, WHITE); display.drawPixel(76, 55, WHITE); display.drawPixel(77, 55, WHITE); display.drawPixel(78, 55, WHITE); 
+ display.drawPixel(65, 56, WHITE); display.drawPixel(67, 56, WHITE); display.drawPixel(74, 56, WHITE); display.drawPixel(76, 56, WHITE); 
+ display.drawPixel(64, 57, WHITE); display.drawPixel(66, 57, WHITE); display.drawPixel(75, 57, WHITE); display.drawPixel(77, 57, WHITE); 
+ display.drawPixel(64, 58, WHITE); display.drawPixel(65, 58, WHITE); display.drawPixel(75, 58, WHITE); display.drawPixel(77, 58, WHITE); display.drawPixel(78, 58, WHITE); 
+ display.drawPixel(57, 59, WHITE); display.drawPixel(58, 59, WHITE); display.drawPixel(63, 59, WHITE); display.drawPixel(65, 59, WHITE); display.drawPixel(76, 59, WHITE); display.drawPixel(78, 59, WHITE); 
+ display.drawPixel(56, 60, WHITE); display.drawPixel(59, 60, WHITE); display.drawPixel(60, 60, WHITE); display.drawPixel(61, 60, WHITE); display.drawPixel(62, 60, WHITE); display.drawPixel(63, 60, WHITE); display.drawPixel(65, 60, WHITE); display.drawPixel(76, 60, WHITE); display.drawPixel(78, 60, WHITE); 
+ display.drawPixel(56, 61, WHITE); display.drawPixel(57, 61, WHITE); display.drawPixel(62, 61, WHITE); display.drawPixel(64, 61, WHITE); display.drawPixel(65, 61, WHITE); display.drawPixel(72, 61, WHITE); display.drawPixel(73, 61, WHITE); display.drawPixel(74, 61, WHITE); display.drawPixel(75, 61, WHITE); display.drawPixel(77, 61, WHITE); display.drawPixel(78, 61, WHITE); 
+ display.drawPixel(57, 62, WHITE); display.drawPixel(58, 62, WHITE); display.drawPixel(59, 62, WHITE); display.drawPixel(60, 62, WHITE); display.drawPixel(61, 62, WHITE); display.drawPixel(62, 62, WHITE); display.drawPixel(63, 62, WHITE); display.drawPixel(64, 62, WHITE); display.drawPixel(71, 62, WHITE); display.drawPixel(76, 62, WHITE); display.drawPixel(78, 62, WHITE); 
+ display.drawPixel(71, 63, WHITE); display.drawPixel(72, 63, WHITE); display.drawPixel(73, 63, WHITE); display.drawPixel(74, 63, WHITE); display.drawPixel(75, 63, WHITE); display.drawPixel(76, 63, WHITE); display.drawPixel(77, 63, WHITE); display.drawPixel(78, 63, WHITE); 
+ 
+ 
+ 
+ 
+ 
+ 

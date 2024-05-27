@@ -1,0 +1,121 @@
+// Arduino Nano, OldBootlader, Pin A4 SDA & Pin A5 SCK(SCL)
+
+#include <Wire.h>             //lib für I2C Kommunikation
+#include <Adafruit_SH1106.h>  //lib fürs Display
+#include <RTClib.h>           //lib für das RTC Modul
+#include <Arduino.h>          //lib
+#include <uEEPROMLib.h>       //lib für das lesen/scheiben vom EEPROM
+#define OLED_RESET 4          //keine Ahnung, aber ohne gehts nicht
+
+RTC_DS3231 rtc;                       //"rtc" definieren
+uEEPROMLib eeprom(0x57);              //Adresse des EEPROM definieren
+Adafruit_SH1106 display(OLED_RESET);  //keine Ahnung, aber ohne gehts nicht
+const int DoorPin = 14;               //Pin für die Steuerung der Tür auf A0/14 legen
+
+void setup() {
+  pinMode(14, OUTPUT);          //Pinmodus festlegen
+  digitalWrite(DoorPin, HIGH);  //Pin erstmal hoch ziehen (Relais ist active low)
+
+  Serial.begin(9600);                        //Durch das Display vorgegeben, schneller leufts nicht
+  display.begin(SH1106_SWITCHCAPVCC, 0x3C);  //something for display again
+  display.setTextSize(1);                    //größe der Schrift
+  display.setTextColor(WHITE);               //farbe der Schrift
+  display.clearDisplay();                    //Display blank putzen
+  display.display();                         //dem Display sagen die vorherigen Anweisungen durch zu führen
+
+  //die untere IF-Schleife für den Fall das der RTC nicht gefunden wird
+  if (!rtc.begin()) {
+    display.setCursor(0, 0);
+    display.println("Zeitgeber nicht gefunden!");
+    display.display();
+    while (1) delay(100);
+  }
+
+  //die untere IF-Schleife für den Fall das der RTC die Zeit vergessen hat
+  if (rtc.lostPower()) {
+    display.setCursor(0, 0);
+    display.print("Batterie des");
+    display.setCursor(0, 8);
+    display.print("Zeitgebers leer!");
+    display.display();
+    while (1) delay(1000);
+  }
+}
+
+
+void loop() {
+  DateTime now = rtc.now();  //jetzt holen
+  int adresse;               //n paar Variablen initieren
+  int OeffneStunde;
+  int OeffneMinute;
+  int CloseStunde;
+  int CloseMinute;
+
+  display.setCursor(0, 0);              //oben links im Display
+  char buf4[] = "DDD DD.MM.YYYY";       //Jetzt als lesbaren Datumstext ummodeln
+  display.println(now.toString(buf4));  //und aufs Display legen
+
+  display.setCursor(0, 8);            //zweite Reihe im Display
+  char buf1[] = "hh:mm:ss";           //Jetzt als lesbaren Uhrzeittext ummodeln
+  display.print(now.toString(buf1));  //und aufs Display legen
+  display.print(" Sommerzeit");       //mit der Info das der RTC auf Sommerzeit läuft
+
+  display.setCursor(0, 16);  //dritte Reihe im Display
+  display.print("Temperatur: ");
+  display.print(rtc.getTemperature());
+  display.print("'C");  //Temperatur ausm RTC holen und aufs Display legen
+
+  adresse = (((now.month() * 31) - 31) + now.day()) * 10;  //Fancy calculation um jedem Tag im Jahr eine eindeutige Adresse im EEPROM zu zu weisen
+  OeffneStunde = eeprom.eeprom_read(adresse);              //Die Zahl der Stunde zum öffnen ausm EEPROM ziehen und in die Variable legen
+  OeffneMinute = eeprom.eeprom_read(adresse + 1);          //wie oben nur als Minute
+  CloseStunde = eeprom.eeprom_read(adresse + 2);           //wie oben nur als Stunde zum schließen
+  CloseMinute = eeprom.eeprom_read(adresse + 3);           //wie oben nur als Minute
+
+  display.setCursor(0, 24);        //vierte Reihe im Display
+  display.print("Oeffnen:    0");  //Öffnezeit anzeigen
+  display.print(OeffneStunde);
+  display.print(":");               //Die Stunde im Klartext anzeigen
+
+  //some IF-Funktion damit die Minute wenn nötig ne 0 vorne an hat
+  if ((OeffneMinute / 10) < 1) {
+    display.print("0");
+    display.print(OeffneMinute);
+  } else {
+    display.print(OeffneMinute);
+  }
+
+  display.print(" Uhr");
+
+  display.setCursor(0, 32);       //fünfte Reihe im Display
+  display.print("Schliessen: ");  //Schließzeit anzeigen
+  display.print(CloseStunde);
+  display.print(":");
+
+  //some IF-Funktion damit die Minute wenn nötig ne 0 vorne an hat
+  if ((CloseMinute / 10) < 1) {
+    display.print("0");
+    display.print(CloseMinute);
+  } else {
+    display.print(CloseMinute);
+  }
+
+  display.print(" Uhr");
+
+  //Tür öffnen routine
+  if ((now.hour() == OeffneStunde) {
+      if ((now.minute() == OeffneMinute) {
+            digitalWrite(DoorPin, HIGH);
+      }
+  }
+
+  //Tür schließen routine
+  if ((now.hour() == CloseStunde) {
+      if ((now.minute() == CloseMinute) {
+            digitalWrite(DoorPin, LOW);
+      }
+  }
+
+  //Jezt alles aufs Display und 1sec warten
+  display.display();
+  delay(1000);
+}
